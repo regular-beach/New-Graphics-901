@@ -1,0 +1,72 @@
+
+*{
+    margin: 100;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(255, 255, 255);
+
+   
+}
+
+
+video {
+    align-items: left;
+} 
+
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+  }
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  .shirts {
+    line-height: 10px;
+  }
+H1{
+    font-family: "input-mono", monospace;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 23px;
+    color: black;
+}
+
+H2{
+font-size: 14px;
+font-family: "input-mono", monospace;
+font-weight: 500;
+font-style: normal;
+
+
+
+}
+body {
+    padding: 15px;
+    padding-left: 220px;
+    color: rgb(0, 0, 0);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+    gap: 2rem;
+}
+   
+
+p1 {
+margin-bottom: 50px;
+font-size: 14px;
+font-family: "input-mono", monospace;
+font-weight: 500;
+font-style: normal;
+width: 50%;
+gap: 2rem;
+}
+
+li {
+    list-style: none;
+    color:black
+}

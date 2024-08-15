@@ -1,0 +1,53 @@
+<div class="carousel-container">
+    <div class="carousel" data-flickity='{ "wrapAround": true, "pageDots": false }'>
+      {% for path in work_list | shuffle %}
+        {% if ".DS_Store" not in path %}
+          <div class="carousel-cell {% if 'process' in path.split('/')[-1].split('_')[2] %}process{% endif %}">
+            <img src="{{ url_for('static', filename=path.replace('static/', '', 1)) }}" alt=""/>
+            {% if 'process' in path.split('/')[-1].split('_')[2] %}
+              <div class="caption">Process</div>
+            {% endif %}
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="totop">
+    <a class="btn" href="#top">
+      Back to top
+    </a>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var flkty = new Flickity('.carousel', {
+      // Flickity options can be adjusted here
+      wrapAround: true,
+      pageDots: false,
+      fullscreen: true, // Example: enabling fullscreen
+      arrowShape: {
+        x0: 10,
+        x1: 60,
+        y1: 50,
+        x2: 65,
+        y2: 45,
+        x3: 20
+      }
+    });
+
+    // Update status function
+    function updateStatus() {
+      var statusElement = document.querySelector('.carousel-container .status');
+      statusElement.textContent = flkty.selectedIndex + 1 + ' / ' + flkty.slides.length;
+    }
+
+    flkty.on('select', updateStatus);
+    updateStatus();
+  });
+</script>
+{% endblock %}

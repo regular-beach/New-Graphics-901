@@ -1,0 +1,23 @@
+{% extends "project.html" %}
+{% set title = "Elevated Weaving Identity" %}
+{% set tags = "Print" %}
+
+{% block head %}
+{{ super() }}
+<link href="{{ url_for('static', filename='styles/work.css') }}" rel="stylesheet" />
+<link href="{{ url_for('static', filename='styles/project.css') }}" rel="stylesheet" />
+
+{% endblock %}
+
+
+{% block description %}
+<p>
+  A special visual identity project for the tree net builders at Elevated Weaving. Starting out in the Oak and Redwood trees of Northern California, this crew is a leader in innovative net building and design. the project started in July 2024 and is ongoing. 
+</p>
+
+
+{% endblock %}
+
+{% block main %}
+{{ super() }}
+{% endblock %}

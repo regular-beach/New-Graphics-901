@@ -1,0 +1,23 @@
+{% extends "project.html" %}
+{% set title = "Independent July 27" %}
+{% set tags = "Print" %}
+
+{% block head %}
+{{ super() }}
+<link href="{{ url_for('static', filename='styles/work.css') }}" rel="stylesheet" />
+<link href="{{ url_for('static', filename='styles/project.css') }}" rel="stylesheet" />
+
+{% endblock %}
+
+
+{% block description %}
+<p>
+ Poster design for a sold out show at the Independent July 27th, 2024 using photoshop and <a href="https://www.pixilart.com/draw" target="_blank">pixilart.com.</a>
+</p>
+
+
+{% endblock %}
+
+{% block main %}
+{{ super() }}
+{% endblock %}

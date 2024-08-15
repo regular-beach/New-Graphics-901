@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" id="top">
+<head>
+  {% block head %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.typekit.net/dfb1yme.css">
+    <title>{% block title %}New-Graphics-901{% endblock %}</title>
+
+    <!-- Base CSS -->
+    <link href="{{ url_for('static', filename='styles/style.css') }}" rel="stylesheet" />
+    <link href="{{ url_for('static', filename='styles/header.css') }}" rel="stylesheet" />
+    <!-- <script src="https://cdn.jsdelivr.net/npm/flickity@2/dist/flickity.pkgd.min.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css"> -->
+{%endblock%}
+</head>
+
+<body>
+  {% include 'header.html' %}
+
+  <main>
+    {% block main %}
+    {% endblock %}
+  </main>
+
+  {% block scripts %}
+  {% endblock %}
+
+
+
+</body>
+</html>   

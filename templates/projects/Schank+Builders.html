@@ -1,0 +1,23 @@
+{% extends "project.html" %}
+{% set title = "Schank Builders Identity" %}
+{% set tags = "Print" %}
+
+{% block head %}
+{{ super() }}
+<link href="{{ url_for('static', filename='styles/work.css') }}" rel="stylesheet" />
+<link href="{{ url_for('static', filename='styles/project.css') }}" rel="stylesheet" />
+
+{% endblock %}
+
+
+{% block description %}
+
+  Identity design for family owned construction management and general contracting company Schank Builders (formerly Pacific Construction Managers) located in Santa Cruz, CA.
+
+
+
+{% endblock %}
+
+{% block main %}
+{{ super() }}
+{% endblock %}

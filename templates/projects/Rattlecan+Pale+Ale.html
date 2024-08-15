@@ -1,0 +1,27 @@
+{% extends "project.html" %}
+{% set title = "Rattlecan Pale Ale" %}
+{% set tags = "Print" %}
+{% set year = "2023" %}
+{% set hero = "front_Rattlecan+Pale+Ale_Rattlecan+Pale+Ale+Label_2022.png" %}
+
+{% block head %}
+<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+{{ super() }}
+<link href="{{ url_for('static', filename='styles/flickity.css') }}" rel="stylesheet" />
+{% endblock %}
+
+
+{% block description %}
+<p>
+  Rattlecan Pale Ale is a fictional identity completed in the Graphic Design 3 course with professor Lihn Dao at Cal Poly SLO. 
+  The idea for this project involved blending aesthetics of lo-brow and craft beers to create an approachable but refined Pale Ale. The Keywords, "8-hour-shift", and "Sunday-drive" were used to fuel the concept.
+</p>
+
+
+{% endblock %}
+
+{% block main %}
+{{ super() }}
+{% endblock %}
+
+<h1>test</h1>

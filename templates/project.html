@@ -1,0 +1,114 @@
+{% extends "base.html" %}
+{% set base_url = "/projects/" + project + "/" %}
+{# set img_url = "static/img/projects" #}
+{% set active_page = "work" %}
+
+{% block head %}
+{{ super() }}
+<link href="{{ url_for('static', filename='styles/work.css') }}" rel="stylesheet" />
+<link href="{{ url_for('static', filename='styles/project.css') }}" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+
+
+{% endblock %}
+
+{% block main %}
+<div class="project">
+  <div class="project-header">
+    <h1 class="project-title">
+      {% if title %}
+        {{ title }}
+      {% else %}
+        Untitled
+      {% endif %}
+    </h1>
+
+    <div class="project-description" onClick="more(this)">
+      {% block description %}
+      {% endblock %}
+    </div>
+  </div>
+
+ <!-- <div class="grid">
+    {% for path in work_list | shuffle %}
+        {% if "front" in path.split('/')[-1].split('_')[0] %}
+            <div class="grid-item {% if 'front_' in path %}wider{% endif %}">
+                <a href="/projects/{{path.strip('/static/img/projects/').split('/')[-1].split('_')[1]}}">
+                    <img src="{{ url_for('static', filename=path.replace('static/', '', 1)) }}" alt=""/>
+                </a>
+            </div>
+        {% endif %}
+    {% endfor %}
+</div>-->
+
+<div class="grid">
+  {% for path in work_list | shuffle %}
+  {% if ".DS_Store" not in path %}
+  <div class="grid-item {% if 'front_' in path %}wider{% endif %}">
+      <img src="{{ url_for('static', filename=path.replace('static/', '', 1)) }}" alt=""/>
+      {% if 'process' in path.split('/')[-1].split('_')[2] %}
+      <div class="caption">Process</div>
+      {% endif %}
+  </div>
+  {% endif %}
+  {% endfor %}
+</div>
+
+
+
+{% endblock %}
+
+{% block scripts %}
+
+<script>
+  document.querySelectorAll('.grid-item').forEach(item => {
+      item.addEventListener('click', function() {
+          this.classList.toggle('expanded');
+      });
+  });
+</script>
+
+
+<!-- smooth scrolling-->
+<script src="https://unpkg.com/packery@2/dist/packery.pkgd.min.js"></script>
+<script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@16.1.3/dist/smooth-scroll.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+
+<script>
+  var scroll = new SmoothScroll('a[href*="#"]', {
+    speed: 100,
+    easing: 'easeOutCubic'
+  });
+
+  // init Packery
+  var grid = document.querySelector('.grid');
+  var pckry = new Packery(grid, {
+    itemSelector: '.grid-item',
+    percentPosition: true
+  });
+
+  // layout Packery after each image loads
+  imagesLoaded(grid).on('progress', function () {
+    pckry.layout();
+  });
+</script>
+
+<script>
+  // toggle show-more visibility
+  function more(x) {
+    x.classList.toggle('hidden');
+  }
+
+  // https://github.com/biati-digital/glightbox
+  const lightbox = GLightbox({
+    loop: true,
+    autoplayVideos: true
+  });
+</script>
+
+
+
+
+
+{% endblock %}
