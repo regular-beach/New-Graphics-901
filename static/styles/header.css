@@ -14,11 +14,9 @@ header {
 
 @media (max-width: 960px) {
 header {
-    width: 100;
-    height: auto;
-    position: static;
-    align-items: center;
+    width: 0;
     padding-left: 0;
+    overflow: hidden;
 }
 
 header > * {
@@ -32,8 +30,10 @@ h1 {
 
 
 .index-link, .project-link, h2, h3 {
-    text-align: center; /* Center-align text */
+    text-align: left; /* Center-align text */
     font-size: 14px; /* Adjust font size if needed */
+    display: block;
+    align-items: end;
 }
 
 .index-link, .project-link {
