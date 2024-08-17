@@ -12,36 +12,50 @@ header {
     transition: all 0.3s ease;
 }
 
-@media (max-width: 960px) {
-header {
-    width: 0;
-    padding-left: 0;
-    overflow: hidden;
-}
-
 header > * {
     margin-bottom: 25px;
 }
 
 h1 {
-    margin-bottom: 25px;
-    align-items: top;
+    font-family: "input-mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 23px;
+    color: black;
+    margin: 0; /* Remove default margin */
 }
 
-
-
 .index-link, .project-link, h2, h3 {
-    text-align: left; /* Center-align text */
+    text-align: left; /* Left-align text */
     font-size: 14px; /* Adjust font size if needed */
     display: block;
-    
 }
 
 .index-link, .project-link {
     padding-bottom: 0; /* Remove bottom padding */
     padding-top: 0; /* Remove top padding */
 }
+
+@media (max-width: 960px) {
+header {
+    width: 100%; /* Full width */
+    padding-left: 0;
+    overflow: hidden;
+    position: static; /* Reset fixed positioning */
 }
+
+header > * {
+    margin-bottom: 15px; /* Adjust margin for smaller screens */
+}
+
+h1 {
+    margin-bottom: 20px; /* Space between h1 and body content */
+}
+
+/* Adjustments for h1 position above the body content */
+.content {
+    margin-top: 60px; /* Space for header and h1 */
+}}
 
 /* Existing CSS rules */
 

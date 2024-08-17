@@ -1,61 +1,27 @@
 
-*{
-    margin: 100;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: rgb(255, 255, 255);
-
-   
-}
-
-
-.column {
-    float: left;
-    width: 33.33%;
-    padding: 5px;
-  }
-  .row::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
-
-  .shirts {
-    line-height: 10px;
-  }
-H1{
-    font-family: "input-mono", monospace;
-    font-weight: 500;
-    font-style: normal;
-    font-size: 23px;
-    color: black;
-}
-
-H2{
-font-size: 14px;
-font-family: "input-mono", monospace;
-font-weight: 500;
-font-style: normal;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: rgb(255, 255, 255);
 }
 
 body {
-    padding: 15px;
-    padding-left: 220px;
-    color: rgb(0, 0, 0);
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 2rem;
-    transition: all 0.3s ease;
+  padding: 15px;
+  padding-left: 220px;
+  color: rgb(0, 0, 0);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+  transition: all 0.3s ease;
 }
-   
-/*@media (max-width: 960px) {
+
+@media (max-width: 960px) {
   body {
-    width: 100%;
-    padding-block: 20px;
-    
-}}*/
+      padding: 0 20px; /* Apply 20px padding on both sides */
+  }}
 
 
 p1 {
