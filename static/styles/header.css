@@ -36,7 +36,9 @@ h1 {
     padding-top: 0; /* Remove top padding */
 }
 
-@media (max-width: 960px) {
+
+
+@media (max-width: 640px) {
 header {
     width: 100%; /* Full width */
     padding-left: 0;
@@ -50,12 +52,8 @@ header > * {
 
 h1 {
     margin-bottom: 20px; /* Space between h1 and body content */
-}
-
-/* Adjustments for h1 position above the body content */
-.content {
-    margin-top: 60px; /* Space for header and h1 */
 }}
+
 
 /* Existing CSS rules */
 
