@@ -5,9 +5,10 @@
 {% set hero = "front_Rattlecan+Pale+Ale_Rattlecan+Pale+Ale+Label_2022.png" %}
 
 {% block head %}
-<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 {{ super() }}
-<link href="{{ url_for('static', filename='styles/flickity.css') }}" rel="stylesheet" />
+<link href="{{ url_for('static', filename='styles/work.css') }}" rel="stylesheet" />
+<link href="{{ url_for('static', filename='styles/project.css') }}" rel="stylesheet" />
+
 {% endblock %}
 
 

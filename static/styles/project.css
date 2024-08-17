@@ -89,7 +89,7 @@
   
     .project-title,
     .project-description {
-      flex: 1 100%;
+      flex: 2 100%;
       font-family: "input-mono", monospace;
       font-weight: 500;
       font-style: normal; 
