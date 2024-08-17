@@ -25,6 +25,7 @@ header > * {
 
 h1 {
     margin-bottom: 25px;
+    align-items: top;
 }
 
 
@@ -33,7 +34,7 @@ h1 {
     text-align: left; /* Center-align text */
     font-size: 14px; /* Adjust font size if needed */
     display: block;
-    align-items: end;
+    
 }
 
 .index-link, .project-link {

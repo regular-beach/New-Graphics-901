@@ -4,6 +4,8 @@ from flask import Flask, url_for
 import random, os
 
 app = Flask(__name__)
+app.debug = False
+
 
 @app.template_filter('shuffle')
 def filter_shuffle(seq):
@@ -70,8 +72,9 @@ def dated_url_for(endpoint, **values):
       values['q'] = int(os.stat(file_path).st_mtime)
   return url_for(endpoint, **values)
   
+#if __name__ == '__main__':
+ #app.run(host='0.0.0.0') 
+
 if __name__ == '__main__':
-  app.run(host='0.0.0.0')
-
-
+  app. run(host='0.0.0.0', port=3000)
     
