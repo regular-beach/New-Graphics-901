@@ -7,10 +7,15 @@
 {{ super() }}
 <link href="{{ url_for('static', filename='styles/work.css') }}" rel="stylesheet" />
 <link href="{{ url_for('static', filename='styles/project.css') }}" rel="stylesheet" />
+<link href="{{ url_for('static', filename='styles/header.css') }}" rel="stylesheet" />
+
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
 
 
 {% endblock %}
+
+
+  {% include 'home.html' %}
 
 {% block main %}
 <div class="project">

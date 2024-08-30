@@ -3,12 +3,23 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: rgb(255, 255, 255);
 }
 
 body {
-  padding: 15px;
-  padding-left: 220px;
+  padding: 75px;
+  padding-top: 25px;
+}
+
+h6 {
+  font-family: "input-mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 23px;
+  color: black;
+  padding-bottom: 25px;
+}
+
+main {
   color: rgb(0, 0, 0);
   min-height: 100vh;
   display: flex;
@@ -16,11 +27,18 @@ body {
   align-items: left;
   gap: 2rem;
   transition: all 0.3s ease;
+  background-color: rgb(255, 255, 255);
+}
+@media (max-width: 960px) {
+  body {
+      padding: 15px; /* Apply 20px padding on both sides*/
+      width: 100%
+  }
 }
 
 @media (max-width: 640px) {
   body {
-      padding: 20px; /* Apply 20px padding on both sides*/
+      padding: 15px; /* Apply 20px padding on both sides*/
       width: 100%
   }
 

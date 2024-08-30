@@ -2,33 +2,3 @@
 {% set active_page = "index" %}
 
 
-{% set img_list = [
-  "Bolinas+HRDWR+Poster/front_Bolinas+HRDWR+Poster_Bolinas+HRDWR+Poster.jpg",
-  "EWEB+&+Every+Thing+Live/front_EWEB+Every+Thing+Live_EWEB+Every+Thing+Live+Poster.jpg",
-  "Rattlecan+Pale+Ale/front_Rattlecan+Pale+Ale_Rattlecan+Pale+Ale+Label.png"
-] %}
-
-{% block head %}
-{{ super() }}
-<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-<link href="{{ url_for('static', filename='styles/flickity.css') }}" rel="stylesheet" />
-<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-{% endblock %}
-
-{% block main %}
-<div class="fixed">
-  <div class="carousel">
-    {% for img in img_list %}
-    <div class="carousel-cell">
-      <img src="{{url_for('static', filename='img/projects/' + img)}}" alt="">
-     <!-- <div class="bleh" style="background-image: url('{{url_for("static", filename="img/projects/" + img)}}')"></div> -->
-    </div>
-    {% endfor %}
-  </div>
-</div>
-{% endblock %}
-
-
-{% block scripts %}
-{% include 'flickity.html' %}
-{% endblock %}

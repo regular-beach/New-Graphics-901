@@ -9,14 +9,18 @@
 
     <!-- Base CSS -->
     <link href="{{ url_for('static', filename='styles/style.css') }}" rel="stylesheet" />
-    <link href="{{ url_for('static', filename='styles/header.css') }}" rel="stylesheet" />
+    <link href="{{ url_for('static', filename='styles/header.css') }}" rel="stylesheet" /> 
     <!-- <script src="https://cdn.jsdelivr.net/npm/flickity@2/dist/flickity.pkgd.min.js"></script>
 <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css"> -->
 {%endblock%}
 </head>
 
 <body>
-  {% include 'header.html' %}
+      
+<!--<intro>
+  {% block intro %}
+  {% endblock %}
+</intro>!-->
 
   <main>
     {% block main %}

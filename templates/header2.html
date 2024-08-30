@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="{{ url_for('static', filename='styles/header.css') }}" rel="stylesheet" />
+  <script type="text/javascript">
+    function showOrHide(clickedElem) {
+      var selector = clickedElem.getAttribute("data-selector");
+      var target = document.querySelector(selector);
+      if (target.style.display === "none" || target.style.display === "") {
+        target.style.display = "block";
+      } else {
+        target.style.display = "none";
+        clickedElem.innerText = "Ren Conger.";
+      }
+    }
+
+    function showOrHide1(clickedElem) {
+      var selector = clickedElem.getAttribute("data-selector");
+      var target = document.querySelector(selector);
+      if (target.style.display === "none" || target.style.display === "") {
+        target.style.display = "block";
+      } else {
+        target.style.display = "none";
+        clickedElem.innerText = "index";
+      }
+    }
+
+    function showOrHide2(clickedElem) {
+      var selector = clickedElem.getAttribute("data-selector");
+      var target = document.querySelector(selector);
+      if (target.style.display === "none" || target.style.display === "") {
+        target.style.display = "block";
+        clickedElem.innerText = "contact";
+      } else {
+        target.style.display = "none";
+        clickedElem.innerText = "contact";
+      }
+    }
+  </script>
+</head>
+
+
+<div class="header-grid"> </div>
+
+<div class="header-item"></div>
+
+
+<body>
+  <header>
+    <h1><a href="{{ url_for('work') }}">New-Graphics-2000</a></h1>
+
+    <h2>
+      You have reached the digital home for the graphic design practice of 
+      <a href="#" id="id" data-selector="#block" onclick="showOrHide(this)">Ren Conger.</a>
+    
+    <div style="display:none" id="block">
+    Ren is an inter-planetary designer and artist working in Sausalito, CA. The mission of New-Graphics-2000 is to create conceptually driven and collaborative design systems <br>for visual communication and one-off works for events or special occasions.
+    </div>
+    </h2>
+
+    <ul>
+      <li> 
+        <a href="#" id="id1" data-selector="#block1" onclick="showOrHide1(this)" class="index-link">index</a>
+        <div style="display:none" id="block1">
+          <ul>
+            {% for project in projects %}
+              <li class="project-link"><a href="{{ url_for('project', project=project) }}">{{ project }}</a></li>
+            {% else %}
+              <li>No projects found</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </li>
+    </ul>
+    
+
+    <h2>
+      <a href="#" id="id2" data-selector="#block2" onclick="showOrHide2(this)">contact</a></h2>
+   
+    <div class="index-link" style="display:none" id="block2"> 
+    <a href="mailto:renconger@gmail.com">email</a>
+
+    <a href="https://www.linkedin.com/in/ren-conger-7b66831ab/" target="_blank">LinkedIn</a>
+    </div> 
+  
+   <div>
+   <h3>NOTICE: This site is a work in progress currently undergoing development :) </h3> 
+    </div>
+ 
+    
+  </header>
+</body>
+</html>
