@@ -81,6 +81,10 @@ text-decoration: underline;
 color: black;
 }
 
+.home {
+    color: rgb(216, 135, 172);
+}
+
 a:hover {
 text-decoration: none;
 color: rgb(162, 162, 162);
@@ -138,14 +142,16 @@ h6 {
     padding-bottom: 25px;
   }
 
-  h7 {
+h7 {
     font-family: "input-mono", monospace;
     font-weight: 400;
     font-style: normal;
-    font-size: 1.5em;
-    color: black;
+    font-size: 1em;
+    color: rgb(193, 193, 193);
     padding-bottom: 25px;
+    
   }
+
 
 .project-link {
 font-size: 1em;
