@@ -11,8 +11,6 @@
     
 }
 
-
-
 body {
     margin: 0;
     height: 100vh;
@@ -67,4 +65,11 @@ body::before {
     width: 100%;
     height: 100%;
     z-index: -1; /* Ensure it’s behind other content */
+}
+@media (max-width: 640px) {
+    .onboard {
+        font-size: 20vw; /* Use viewport width to make text large */
+        padding: 0; /* Remove padding for full screen usage */
+        height: 100vh; /* Ensure it takes up full height */
+    }
 }
