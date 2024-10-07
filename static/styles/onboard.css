@@ -1,0 +1,70 @@
+.onboard {
+    font-family: "input-mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 5.1em;
+    color: rgb(0, 0, 0);
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 10vh;
+    padding-top: 31vh;
+    
+}
+
+
+
+body {
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+    position: relative; /* Position for the pseudo-element */
+}
+Z
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(270deg, #ffffff, #de9faf);
+    background-size: 300% 300%;
+    animation: gradient-move-backward 15s ease infinite; /* Change to backward animation */
+    mix-blend-mode: multiply; /* Change blend mode as needed */
+}
+
+@keyframes gradient-move {
+    0% {
+        background-position: 0% 35%;
+    }
+    35% {
+        background-position: 100% 35%;
+    }
+    100% {
+        background-position: 0% 35%;
+    }
+}
+
+@keyframes gradient-move-backward {
+    0% {
+        background-position: 100% 50%; /* Start from the right */
+    }
+    50% {
+        background-position: 0% 50%; /* Move to the left */
+    }
+    100% {
+        background-position: 100% 50%; /* Return to the right */
+    }
+}
+
+.gradient-background {
+    background: linear-gradient(270deg, #ffffff, #fd9db8);
+    background-size: 300% 300%;
+    animation: gradient-move 15s ease infinite; /* Original gradient */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Ensure it’s behind other content */
+}

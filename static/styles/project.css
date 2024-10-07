@@ -88,8 +88,8 @@
   
 
     .project-title {
-      padding-top: .5em;
-      padding-bottom: .5em;
+      padding-top: .25em;
+      padding-bottom: .25em;
       flex: 2 100%;
       font-family: "input-mono", monospace;
       font-weight: 500;
