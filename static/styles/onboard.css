@@ -68,7 +68,6 @@ body::before {
 }
 @media (max-width: 640px) {
     .onboard {
-        font-size: 20vw; /* Use viewport width to make text large */
         padding: 0; /* Remove padding for full screen usage */
         height: 100vh; /* Ensure it takes up full height */
     }
