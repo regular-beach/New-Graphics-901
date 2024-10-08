@@ -66,9 +66,11 @@ body::before {
     height: 100%;
     z-index: -1; /* Ensure it’s behind other content */
 }
-@media (max-width: 640px) {
+@media (-width: 640px) {
     .onboard {
-        padding: 0; /* Remove padding for full screen usage */
-        height: 100vh; /* Ensure it takes up full height */
+        padding-bottom: 2vh;
+        padding-top: 2vh;
+        font-size: 8em;
+    
     }
 }
