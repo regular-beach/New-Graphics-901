@@ -69,8 +69,8 @@ body::before {
 @media (-width: 640px) {
     .onboard {
         padding-bottom: 2vh;
-        padding-top: 2vh;
-        font-size: 8em;
+        padding-top: 31vh;
+        font-size: 100%;
     
     }
 }
