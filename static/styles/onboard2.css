@@ -151,4 +151,5 @@ padding-right: 15px;}}
 
 @media (max-width: 555px)  {#description
      {position: absolute;
-    top: 2; }}
+    top: 71vh;
+    line-height: 1.3em }}
