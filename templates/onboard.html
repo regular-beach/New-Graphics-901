@@ -9,26 +9,104 @@
     <link href="{{ url_for('static', filename='styles/onboard2.css') }}" rel="stylesheet" />
     <link rel="stylesheet" href="https://use.typekit.net/dfb1yme.css">
 </head>
+<div id="typingContainer">
+<div id="typingTextTop" class="intro"></div>
+<div id="typingTextMiddle" class="intro"></div>
+<div id="typingTextBottom" class="intro"></div>
+</div>
 
 <body class="gradient-background">
 
+<main class="main" id="mainContent">
 <div class="container">
     <a class="onboard" href="{{ url_for('work') }}">New-Graphics-2000</a>
-    <a class="onboard2" href="{{ url_for('work') }}">Enter</a>
+    <a class="onboard2" href="{{ url_for('work') }}">Enter>>></a>
 </div>
+
+
 
 <div class="hero-container" data-images='[
-    {"src": "{{ url_for('static', filename='img/showcase/01.jpg') }}", "desc": "Visual identity, Schank Builders, Santa Cruz, CA."},
+    {"src": "{{ url_for('static', filename='img/showcase/04.jpg') }}", "desc": "Catalog and graphic design, Regular Beach."},
+    {"src": "{{ url_for('static', filename='img/showcase/03.gif') }}", "desc": "Visual identity, ZMDF."},
+    {"src": "{{ url_for('static', filename='img/showcase/01.jpg') }}", "desc": "Identity, website, and graphic design, Schank Builders, Santa Cruz, CA."},
     {"src": "{{ url_for('static', filename='img/showcase/02.jpg') }}", "desc": "Poster Design, EWEB and Everything, The Independent, SF."},
-    {"src": "{{ url_for('static', filename='img/showcase/03.gif') }}", "desc": "Visual identity, ZMDF."}
+    {"src": "{{ url_for('static', filename='img/showcase/05.gif') }}", "desc": "Visual Identity, Elevated Weaving."}
 ]'>
     <div class="click-area left" id="prev-area"></div>
-    <img id="hero-image" class="hero" src="{{ url_for('static', filename='img/showcase/01.jpg') }}" alt="Hero Image">
-    <p id="description">Visual identity, Schank Builders, Santa Cruz, California</p>
+    <img id="hero-image" class="hero" src="{{ url_for('static', filename='img/showcase/04.jpg') }}" alt="Hero Image">
+    <p id="description">Catalog and graphic design, Regular Beach.</p>
     <div class="click-area right" id="next-area"></div>
 </div>
+</main>
 
 <script>
+       document.addEventListener("DOMContentLoaded", function() {
+    const text = "New-Graphics-2000";
+    const typingSpeed = 50;
+    const delays = [300, 0, 600];
+
+    const typingTextTop = document.getElementById("typingTextTop");
+    const typingTextMiddle = document.getElementById("typingTextMiddle");
+    const typingTextBottom = document.getElementById("typingTextBottom");
+    const typingContainer = document.getElementById("typingContainer");
+    const mainContent = document.getElementById("mainContent");
+
+    function typeText(element, delay) {
+        let index = 0;
+        setTimeout(() => {
+            function type() {
+                if (index < text.length) {
+                    element.textContent += text.charAt(index);
+                    index++;
+                    setTimeout(type, typingSpeed);
+                } else {
+                    if (element === typingTextBottom) {
+                        setTimeout(fadeOutTexts, 1000);
+                    }
+                }
+            }
+            type();
+        }, delay);
+    }
+
+    function fadeOutTexts() {
+        typingContainer.style.opacity = "0";
+        setTimeout(() => {
+            typingContainer.style.display = "none";
+            sessionStorage.setItem("visited", "true"); // Mark the session as played
+            showMain();
+        }, 500);
+    }
+
+    function showMain() {
+        setTimeout(() => {
+            if (mainContent) {
+                mainContent.classList.add("main-visible");
+            }
+        }, 500);
+    }
+
+    window.addEventListener("load", function() {
+        if (!sessionStorage.getItem("visited")) {
+            // First-ever visit: Show intro animation
+            typingContainer.style.display = "flex"; // Make sure it's visible
+            typeText(typingTextTop, delays[0]);
+            typeText(typingTextMiddle, delays[1]);
+            typeText(typingTextBottom, delays[2]);
+        } else {
+            // Already visited: Hide intro text & show main content immediately
+            typingContainer.style.display = "none";
+            showMain();
+        }
+    });
+});
+
+
+
+
+
+
+
     const heroContainer = document.querySelector(".hero-container");
     const images = JSON.parse(heroContainer.getAttribute("data-images"));
 

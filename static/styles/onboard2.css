@@ -92,3 +92,60 @@
         /*design Cursor arrow*/
     }
 
+
+    #typingContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .intro {
+        font-size: 1em;
+        font-family: "input-mono", monospace;
+        font-weight: 400;
+        font-style: normal;
+        white-space: nowrap;
+        text-align: left;
+        opacity: 1;
+    }
+    
+    #typingTextTop {
+        position: absolute;
+        top: 47%;
+        opacity: 0.6;
+    }
+    
+    #typingTextMiddle {
+        position: absolute;
+        top: 50%;
+    }
+    
+    #typingTextBottom {
+        position: absolute;
+        top: 53%;
+        opacity: 0.3;
+    }
+
+    .main {
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    .main-visible {
+        visibility: visible;
+        opacity: 1;
+        transition: none; 
+}
+
+@media (max-height: 620px)  {.hero {height: 60%}}
+@media (max-width: 555px)  {.onboard , .onboard2  {padding-bottom: 0}}
+
+@media (max-width: 555px)  {#description
+     {position: absolute;
+    top: 75vh; }}
