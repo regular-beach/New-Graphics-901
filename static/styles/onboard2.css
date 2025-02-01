@@ -1,0 +1,94 @@
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.onboard {
+    font-size: 1em;
+    font-family: "input-mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+    padding-left: 75px;
+    padding-right: 75px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+
+    }
+
+    .onboard2 {
+        font-size: 1em;
+        font-family: "input-mono", monospace;
+        font-weight: 400;
+        font-style: normal;
+        padding-left: 75px;
+        padding-right: 75px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+
+    body {
+        overflow: hidden;
+        position: relative;
+        margin: 0;
+        padding: 0;
+    }
+
+
+    .hero-container {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+    }
+
+    .hero {
+        width: 100vw;
+        height: 80vh;
+        object-fit: cover;
+        transition: opacity .5s ease-in-out;
+        animation: none;
+    
+    }
+
+    .hero:hover {
+        animation: playAnimation 1s infinite;
+    }
+
+    @keyframes playAnimation {
+        0% {opacity : 0;}
+        100% {opacity: 1; }
+    }
+
+    #description {
+        font-size: 1em;
+        font-family: "input-mono", monospace;
+        font-weight: 400;
+        font-style: normal;
+        text-align: center;
+        margin-bottom: 20px;
+        width: 100%; 
+    }
+
+    .click-area {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+    }
+
+  
+
+    .right {
+        width: 100%;
+        /*design Cursor arrow*/
+    }
+

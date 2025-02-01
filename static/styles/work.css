@@ -23,7 +23,7 @@
   
     .grid-item img {
       width: 100%;
-      border-radius: 8px;
+      
       transition: box-shadow, transform 200ms var(--anim);
     }
   

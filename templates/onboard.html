@@ -1,8 +1,67 @@
-   
-    <link href="{{ url_for('static', filename='styles/style.css') }}" rel="stylesheet" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NG2</title>
+
     <link href="{{ url_for('static', filename='styles/header.css') }}" rel="stylesheet" />
-    <link href="{{ url_for('static', filename='styles/onboard.css') }}" rel="stylesheet" />
+    <link href="{{ url_for('static', filename='styles/onboard2.css') }}" rel="stylesheet" />
     <link rel="stylesheet" href="https://use.typekit.net/dfb1yme.css">
-  <body class="gradient-background">
-    <a class="onboard" href="{{ url_for('work') }}">New-<br>Graphics-<br>2000</a>
-</body> 
+</head>
+
+<body class="gradient-background">
+
+<div class="container">
+    <a class="onboard" href="{{ url_for('work') }}">New-Graphics-2000</a>
+    <a class="onboard2" href="{{ url_for('work') }}">Enter</a>
+</div>
+
+<div class="hero-container" data-images='[
+    {"src": "{{ url_for('static', filename='img/showcase/01.jpg') }}", "desc": "Visual identity, Schank Builders, Santa Cruz, CA."},
+    {"src": "{{ url_for('static', filename='img/showcase/02.jpg') }}", "desc": "Poster Design, EWEB and Everything, The Independent, SF."},
+    {"src": "{{ url_for('static', filename='img/showcase/03.gif') }}", "desc": "Visual identity, ZMDF."}
+]'>
+    <div class="click-area left" id="prev-area"></div>
+    <img id="hero-image" class="hero" src="{{ url_for('static', filename='img/showcase/01.jpg') }}" alt="Hero Image">
+    <p id="description">Visual identity, Schank Builders, Santa Cruz, California</p>
+    <div class="click-area right" id="next-area"></div>
+</div>
+
+<script>
+    const heroContainer = document.querySelector(".hero-container");
+    const images = JSON.parse(heroContainer.getAttribute("data-images"));
+
+    let currentIndex = 0;
+    const heroImage = document.getElementById("hero-image");
+    const description = document.getElementById("description");
+    const prevArea = document.getElementById("prev-area");
+    const nextArea = document.getElementById("next-area");
+
+    function updateHero() {
+        heroImage.style.opacity = "0"; 
+
+        setTimeout(() => {
+            let currentImage = images[currentIndex];
+            heroImage.src = currentImage.staticSrc || currentImage.src; // Show static preview if available
+            description.textContent = currentImage.desc;
+            heroImage.style.opacity = "1";
+        }, 300);
+    }
+
+    nextArea.addEventListener("click", () => {
+        currentIndex = (currentIndex + 1) % images.length;
+        updateHero();
+    });
+
+    prevArea.addEventListener("click", () => {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        updateHero();
+    });
+
+  
+
+</script>
+
+</body>
+</html>
