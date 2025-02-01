@@ -144,8 +144,11 @@
 }
 
 @media (max-height: 620px)  {.hero {height: 60%}}
-@media (max-width: 555px)  {.onboard , .onboard2  {padding-bottom: 0}}
+@media (max-width: 555px)  {.onboard , .onboard2  {
+    padding-bottom: 0;
+    padding-left: 15px;
+padding-right: 15px;}}
 
 @media (max-width: 555px)  {#description
      {position: absolute;
-    top: 75vh; }}
+    top: 2; }}
