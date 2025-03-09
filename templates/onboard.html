@@ -99,6 +99,7 @@
             showMain();
         }
     });
+
     function updateHero() {
     const currentImage = images[currentIndex];
     const img = new Image(); // Create a new image object
@@ -132,27 +133,6 @@
     const description = document.getElementById("description");
     const prevArea = document.getElementById("prev-area");
     const nextArea = document.getElementById("next-area");
-
-    function updateHero() {
-        heroImage.style.opacity = "0"; 
-
-        setTimeout(() => {
-            let currentImage = images[currentIndex];
-            heroImage.src = currentImage.staticSrc || currentImage.src; // Show static preview if available
-            description.textContent = currentImage.desc;
-            heroImage.style.opacity = "1";
-        }, 300);
-    }
-
-    nextArea.addEventListener("click", () => {
-        currentIndex = (currentIndex + 1) % images.length;
-        updateHero();
-    });
-
-    prevArea.addEventListener("click", () => {
-        currentIndex = (currentIndex - 1 + images.length) % images.length;
-        updateHero();
-    });
 
   
 
