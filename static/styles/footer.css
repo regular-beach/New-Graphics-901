@@ -1,0 +1,9 @@
+.footer{
+    font-size: 1em;
+font-family: "input-mono", monospace;
+font-weight: 400;
+font-style: normal;
+padding-bottom: 10px;
+display: flex;
+width: 70%;
+}

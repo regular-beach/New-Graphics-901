@@ -99,6 +99,23 @@
             showMain();
         }
     });
+    function updateHero() {
+    const currentImage = images[currentIndex];
+    const img = new Image(); // Create a new image object
+
+    img.onload = function() {
+        heroImage.style.opacity = "0"; // Fade out the current image
+
+        setTimeout(() => {
+            heroImage.src = currentImage.src; // Change the image source only after it's loaded
+            description.textContent = currentImage.desc;
+            heroImage.style.opacity = "1"; // Fade in the new image
+        }, 300);
+    };
+
+    img.src = currentImage.src; // Start loading the new image
+}
+
 });
 
 

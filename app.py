@@ -29,6 +29,8 @@ def enter():
 
 
 
+
+
 @app.route('/work')
 def work():
   path = "static/img/projects"
