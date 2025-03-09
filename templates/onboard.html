@@ -99,24 +99,6 @@
             showMain();
         }
     });
-
-    function updateHero() {
-    const currentImage = images[currentIndex];
-    const img = new Image(); // Create a new image object
-
-    img.onload = function() {
-        heroImage.style.opacity = "0"; // Fade out the current image
-
-        setTimeout(() => {
-            heroImage.src = currentImage.src; // Change the image source only after it's loaded
-            description.textContent = currentImage.desc;
-            heroImage.style.opacity = "1"; // Fade in the new image
-        }, 300);
-    };
-
-    img.src = currentImage.src; // Start loading the new image
-}
-
 });
 
 
@@ -134,7 +116,34 @@
     const prevArea = document.getElementById("prev-area");
     const nextArea = document.getElementById("next-area");
 
-  
+    function updateHero() {
+    let currentImage = images[currentIndex];
+    let newImg = new Image(); // Create a new Image object
+
+    newImg.src = currentImage.src; // Start loading the new image
+
+    newImg.onload = function() { // Wait until the new image is fully loaded
+        heroImage.style.opacity = "0"; // Fade out current image
+
+        setTimeout(() => {
+            heroImage.src = newImg.src; // Swap to the new image after it's loaded
+            description.textContent = currentImage.desc;
+            heroImage.style.opacity = "1"; // Fade in new image
+        }, 300); // Keep transition timing
+    };
+}
+
+// Click event listeners
+nextArea.addEventListener("click", () => {
+    currentIndex = (currentIndex + 1) % images.length;
+    updateHero();
+});
+
+prevArea.addEventListener("click", () => {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    updateHero();
+});
+
 
 </script>
 
