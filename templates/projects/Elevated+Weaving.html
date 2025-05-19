@@ -4,19 +4,12 @@
 
 {% block head %}
 {{ super() }}
-<link href="{{ url_for('static', filename='styles/work.css') }}" rel="stylesheet" />
+
 <link href="{{ url_for('static', filename='styles/project.css') }}" rel="stylesheet" />
 
 {% endblock %}
 
 
-{% block description %}
-<p>
-  A special visual identity project for the tree net builders at Elevated Weaving. Starting out in the Oak and Redwood trees of Northern California, this crew is a leader in innovative net building and design. 
-</p>
-
-
-{% endblock %}
 
 {% block main %}
 {{ super() }}

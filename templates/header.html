@@ -57,7 +57,7 @@
   <header>
 <div class="row">
   <div class="column">
-    <h6><a href="{{ url_for('work') }}">New-<br>Graphics-<br>2000</a></h6>
+    <h6><a href="{{ url_for('face') }}">New-<br>Graphics-<br>2000</a></h6>
   </div>
 
   <div class="column">
@@ -71,48 +71,40 @@
         </span>
     
     <div style="display:none" id="block3">
-        Ren is an inter-planetary designer and artist working in Sausalito, CA. The mission of New-Graphics-2000 is to create conceptually driven and collaborative design systems for visual communication and one-off works for events or special occasions.
+        Ren is a designer and visual artist working in Sausalito, CA. The mission of New-Graphics-2000 (((NG2))) is to create conceptually driven and collaborative design systems for visual communication and one-off works for events or special occasions. Please don't hesitate to reach out with inquires about previous, present, or future projects.
     </div>
     <div style="display:none" id="block">
-        Ren is an inter-planetary designer and artist working in Sausalito, CA. The mission of New-Graphics-2000 is to create conceptually driven and collaborative design systems for visual communication and one-off works for events or special occasions.
+      Ren is a designer and visual artist working in Sausalito, CA. The mission of New-Graphics-2000 (((NG2))) is to create conceptually driven and collaborative design systems for visual communication and one-off works for events or special occasions. Please don't hesitate to reach out with inquires about previous, present, or future projects.
     </div> </h2>
 </div>
 
 
     <div class="column">
-      <ul>
-        <li> 
-          <a href="#" id="id1" data-selector="#block1" onclick="showOrHide1(this)" class="index-link">index</a>
-          <div style="display:none" id="block1">
-            <ul>
-              {% for project in projects %}
-                <li class="project-link"><a href="{{ url_for('project', project=project) }}">{{ project }}</a></li>
-              {% else %}
-                <li>No projects found</li>
-              {% endfor %}
-            </ul>
-          </div>
-        </li>
-      </ul>
-
-      
         <a href="#" id="id2" data-selector="#block2" onclick="showOrHide2(this)" class="index-link">contact</a>
      
       <div class="index-link" style="display:none" id="block2"> 
-      <a href="mailto:renconger@gmail.com">email</a>
+      <a href="mailto:ren@new-graphics-2000.com">email</a>
   
       <a href="https://www.linkedin.com/in/ren-conger-7b66831ab/" target="_blank">LinkedIn</a>
       </div> 
     </div>
-    
 
     
-  <!--<div class="column">
-   <div>
-  <h3>NOTICE: This site is a work in progress currently undergoing development :) </h3>  
-    </div>
-  </div>!-->
-    
   </header>
+
+  <script>
+    const link = document.getElementById('toggleView');
+    let currentView = 'grid';
+  
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      currentView = currentView === 'grid' ? 'list' : 'grid';
+      link.textContent = currentView.charAt(0).toUpperCase() + currentView.slice(1);
+  
+      // Optional: Add logic to toggle a class or make a request
+      document.body.classList.toggle('grid-view');
+      document.body.classList.toggle('list-view');
+    });
+  </script>
 </body>
 </html>

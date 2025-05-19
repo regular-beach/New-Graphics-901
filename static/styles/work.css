@@ -51,3 +51,166 @@
       overflow: hidden;
       text-overflow: ellipsis;
     }
+
+ 
+
+    #typingContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+  }
+
+  #typingTextTop {
+    position: absolute;
+    top: 47%;
+    opacity: 0.6;
+}
+
+#typingTextMiddle {
+    position: absolute;
+    top: 50%;
+}
+
+#typingTextBottom {
+    position: absolute;
+    top: 53%;
+    opacity: 0.3;
+}
+
+.main {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.main-visible {
+    visibility: visible;
+    opacity: 1;
+    transition: none; 
+}
+
+.intro {
+  font-size: 1em;
+  font-family: "input-mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+  white-space: nowrap;
+  text-align: left;
+  opacity: 1;
+}
+
+.view {
+  color: grey;
+font-size: .8em;
+font-weight: 200;
+font-family: input mono, monospace;
+
+}
+
+/*list*/
+
+.project-layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 5vw;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.project-list {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-row {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+margin-left: 0;
+  text-decoration: none;
+  color: inherit;
+  transition: background 0.2s ease;
+  
+}
+
+.project-title {
+  font-size: 3.5em;
+  font-family: "stevie-sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: greenyellow;
+}
+
+.project-meta {
+  font-size: .8em;
+  font-weight: 200;
+  color: #000000;
+  font-family: input mono, monospace;
+  display: flex;
+  gap: 3rem;
+  padding-right: 3rem;
+}
+
+.project-row:hover {
+  background-color: #ffffff;
+}
+
+.project-info {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+
+
+.project-preview {
+  position: sticky;
+  top: 0; /* keeps it visible while scrolling */
+  width: 40%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#preview-img {
+  max-width: 100%;
+  max-height: 100%;
+  display: none;
+}
+
+.mobile-preview {
+  display: none;
+  width: 100%;
+  margin-bottom: 1rem;
+  object-fit: contain;
+}
+
+@media (max-width: 959px) {
+  .project-list {
+    width: 100%;
+  }
+
+  .project-row {
+    padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .project-preview {
+    display: none;
+  }
+
+  .mobile-preview {
+    display: block;
+  }
+}

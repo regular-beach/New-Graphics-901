@@ -19,11 +19,24 @@
 
 <main class="main" id="mainContent">
 <div class="container">
-    <a class="onboard" href="{{ url_for('work') }}">New-Graphics-2000</a>
-    <a class="onboard2" href="{{ url_for('work') }}">Enter>>></a>
+    <a class="onboard" href="{{ url_for('face') }}">New-Graphics-2000</a>
+    
 </div>
 
 
+
+<div class="hero-container" data-images='[
+    {"src": "{{ url_for('static', filename='img/showcase/04.jpg') }}", "desc": "Catalog and graphic design, Regular Beach."},
+    {"src": "{{ url_for('static', filename='img/showcase/03.gif') }}", "desc": "Visual identity, ZMDF."},
+    {"src": "{{ url_for('static', filename='img/showcase/01.jpg') }}", "desc": "Identity, website, and graphic design, Schank Builders, Santa Cruz, CA."},
+    {"src": "{{ url_for('static', filename='img/showcase/02.jpg') }}", "desc": "Poster Design, EWEB and Everything, The Independent, SF."},
+    {"src": "{{ url_for('static', filename='img/showcase/05.gif') }}", "desc": "Visual Identity, Elevated Weaving."}
+]'>
+    <div class="click-area left" id="prev-area"></div>
+    <img id="hero-image" class="hero" src="{{ url_for('static', filename='img/showcase/04.jpg') }}" alt="Hero Image">
+    <p id="description">Catalog and graphic design, Regular Beach.</p>
+    <div class="click-area right" id="next-area"></div>
+</div>
 </main>
 
 <script>
@@ -86,6 +99,49 @@
             showMain();
         }
     });
+});
+
+
+
+
+
+
+
+    const heroContainer = document.querySelector(".hero-container");
+    const images = JSON.parse(heroContainer.getAttribute("data-images"));
+
+    let currentIndex = 0;
+    const heroImage = document.getElementById("hero-image");
+    const description = document.getElementById("description");
+    const prevArea = document.getElementById("prev-area");
+    const nextArea = document.getElementById("next-area");
+
+    function updateHero() {
+    let currentImage = images[currentIndex];
+    let newImg = new Image(); // Create a new Image object
+
+    newImg.src = currentImage.src; // Start loading the new image
+
+    newImg.onload = function() { // Wait until the new image is fully loaded
+        heroImage.style.opacity = "0"; // Fade out current image
+
+        setTimeout(() => {
+            heroImage.src = newImg.src; // Swap to the new image after it's loaded
+            description.textContent = currentImage.desc;
+            heroImage.style.opacity = "1"; // Fade in new image
+        }, 300); // Keep transition timing
+    };
+}
+
+// Click event listeners
+nextArea.addEventListener("click", () => {
+    currentIndex = (currentIndex + 1) % images.length;
+    updateHero();
+});
+
+prevArea.addEventListener("click", () => {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    updateHero();
 });
 
 

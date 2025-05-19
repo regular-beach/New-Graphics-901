@@ -2,9 +2,15 @@ from flask import Flask, render_template, request
 from waitress import serve
 from flask import Flask, url_for
 import random, os
+import json
+
 
 app = Flask(__name__)
 app.debug = False
+
+def load_project_data():
+    with open("projects.json") as f:
+        return json.load(f)
 
 
 @app.template_filter('shuffle')
@@ -24,11 +30,18 @@ def filter_capfirst(s):
 
 
 @app.route('/')
-def enter():
-  return render_template('onboard.html')
+def face():
+    project_list = load_project_data()
 
+    # attach full image paths
+    for project in project_list:
+        project["image"] = url_for('static', filename=f'img/projects/{project["slug"]}/{project["image"]}')
 
+    return render_template('face.html', projects=project_list)
 
+@app.route('/carousel')
+def carousel():
+   return render_template('carousel.html')
 
 
 @app.route('/work')
@@ -40,14 +53,36 @@ def work():
       fname.append(os.path.join(root, f))
   return render_template('work.html', work_list = fname)
 
+import json
+
 @app.route('/projects/<project>')
 def project(project):
-  path = "static/img/projects/" + project
-  fname = []
-  for root, d_names, f_names in os.walk(path):
-    for f in f_names:
-      fname.append(os.path.join(root, f))
-  return render_template('projects/' + project + '.html', project = project, work_list = fname)
+    # Get list of image paths
+    path = "static/img/projects/" + project
+    fname = []
+    for root, d_names, f_names in os.walk(path):
+        for f in f_names:
+            if not f.startswith('.'):  # Ignore hidden files like .DS_Store
+                fname.append(os.path.join(root, f))
+
+    # Load metadata from projects.json
+    project_data = {}
+    try:
+        with open('projects.json') as f:
+            all_projects = json.load(f)
+            # Find matching project by slug
+            project_data = next((p for p in all_projects if p.get("slug") == project), {})
+    except FileNotFoundError:
+        print("projects.json not found.")
+
+    # Merge the metadata into the render call
+    return render_template(
+        f'projects/{project}.html',
+        project=project,
+        work_list=fname,
+        **project_data  # Adds: title, type, year, description, etc.
+    )
+
 
 @app.context_processor
 def inject_projects():

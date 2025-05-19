@@ -4,19 +4,12 @@
 {{ super() }}
 <link href="{{ url_for('static', filename='styles/work.css') }}" rel="stylesheet" />
 <link href="{{ url_for('static', filename='styles/header.css') }}" rel="stylesheet" />
-<!--<link href="{{ url_for('static', filename='styles/intro.css') }}" rel="stylesheet" />!-->
 {% endblock %}
 
-<!--{% block intro %}
-<div class="intro">
-  <H5>New-Graphics-2000</H5>
-</div>
-{% endblock %}!-->
-
-{% include 'header.html' %}
-
+{% include 'home.html' %}
 
 {% block main %}
+
   <div class="grid">
     {% for path in work_list | shuffle %}
       {% if "front" in path.split('/')[-1].split('_')[0] %}
@@ -24,7 +17,7 @@
         <a href="/projects/{{path.strip('/static/img/projects/').split('/')[-1].split('_')[1]}}">
       
            <img src="{{url_for('static', filename=path.replace('static/', '', 1))}}" alt=""/> 
-          <div class="caption">{{path.split('/')[3].replace('+', ' ')}}</div>
+          
         </a>
       </div>
       {% endif %}

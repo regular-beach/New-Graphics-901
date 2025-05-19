@@ -1,19 +1,15 @@
 
-/* Container for flexboxes */
 .row {
     display: flex;
     flex-wrap: wrap;
-    padding-bottom: 10vh;
-    padding-top: 31vh;
-
+    justify-content: space-between;
+    gap: 2vw; /* Adjust as needed */
   }
   
- /* Create four equal columns */
-.column {
-    flex: 1 1 25%; /* Adjust to allow flexible width */
-    padding-right: 10vw;
-    box-sizing: border-box; /* Include padding in the width calculation */
-}
+  .column {
+    flex: 1 1 calc((100% - 2 * 2vw) / 3); /* 3 columns with 2 gaps */
+    box-sizing: border-box;
+  }
 
 .short-description {
     display: inline;
@@ -24,7 +20,7 @@
     
 
 /* On screens that are 960px wide or less, stack columns in a single row */
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 960px) {
     .row{
         padding-bottom: 2vh;
         padding-top: 2vh;
@@ -54,7 +50,7 @@
     }
 }
 
-@media screen and (min-width: 641px) {
+@media screen and (min-width: 961px) {
     .short-description {
         display: none; /* Hide the short description */
     }
@@ -115,7 +111,7 @@ font-size: 1em;
 font-family: "input-mono", monospace;
 font-weight: 400;
 font-style: normal;
-min-width: 75%;
+min-width: 100%;
 }
 
 h3 {
@@ -137,16 +133,15 @@ h6 {
     font-family: "input-mono", monospace;
     font-weight: 400;
     font-style: normal;
-    font-size: 2.5em;
+    font-size: 1.2em;
     color: black;
-    padding-bottom: 25px;
   }
 
 h7 {
     font-family: "input-mono", monospace;
     font-weight: 400;
     font-style: normal;
-    font-size: 1.25em;
+    font-size: 1em;
     color: rgb(193, 193, 193);
     padding-bottom: 25px;
     

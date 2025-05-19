@@ -1,0 +1,105 @@
+[  
+  {
+    "title": "25th CMG Party",
+    "type": "Invitation",
+    "year": "2025",
+    "slug": "25th+CMG+Party",
+    "description": "Animated Invitation celebrating CMG Landscape Architecture's 25th year in Business.",
+    "image": "front_one_25th+CMG+Party_25th+CMG+Party.gif"
+  },  
+
+{
+  "title": "The Farm Diary",
+  "type": "Website",
+  "year": "2025",
+  "slug": "The+Farm+Diary",
+  "description": "Web design and development for a portfolio which documents 5 years of managing and restoring a historic vineyard property in Sonoma, CA. Password required for full access. Please contact for permissions.",
+  "image": "front_hero_The+Farm+Diary_The+Farm+Diary_hero.jpg"
+},
+
+{
+  "title": "Shakespeare on the Water",
+  "type": "Identity, Poster",
+  "year": "2025, Ongoing",
+  "slug": "Shakespeare+on+the+Water",
+  "description": "Rebranding and event graphics for a Sausalito theater company hosting various programming and workshops.",
+  "image": "front_one_Shakespeare+on+the+Water_Shakespeare+on+the+Water_summer+club.jpg"
+},
+  {
+    "title": "ZMDF",
+    "type": "Identity",
+    "year": "2024",
+    "slug": "ZMDF",
+    "description": "Identity System for Zac Mosher Design & Fabrication (ZMDF).",
+    "image": "front_ZMDF_ZMDF_01.gif",
+    "url": "https://www.zmdesignfab.com/"
+  }, 
+
+
+    {
+      "title": "Regular Beach",
+      "type": "Art Direction, Web, Graphic Design",
+      "year": "2023-present",
+      "slug": "Regular+Beach",
+      "description": "Regular Beach is a brand, arts collective and media library building community in design and visual arts among other things. Visit the website to view ongoing projects.",
+      "image": "face_front_Regular+Beach_Regular+Beach_grid.jpg",
+      "url": "https://regularbeach.com"
+    },
+
+    {
+        "title": "Schank Builders",
+        "type": "Identity, Web, Graphic Design",
+        "year": "2022, 2024",
+        "slug": "Schank+Builders",
+        "description": "Identity and Web design for family owned construction management and general contracting company Schank Builders (formerly Pacific Construction Managers) located in Santa Cruz, CA.",
+        "image": "face_front_Schank+Builders_Schank+Builders+saw.png",
+        "url": "https://www.schank.builders/"
+      },
+
+    {
+        "title": "Elevated Weaving",
+        "type": "Identity",
+        "year": "2024",
+        "slug": "Elevated+Weaving",
+        "description": "A special visual identity project for the tree net builders at Elevated Weaving. Starting out in the Oak and Redwood trees of Northern California, this crew is a leader in innovative net building and design. ",
+        "image": "front_Elevated+Weaving_Elevated+Weaving_01.gif"
+      },
+      {
+        "title": "Independent July 27",
+        "type": "Poster",
+        "year": "2024",
+        "slug": "Independent+July+27",
+       "description": "Poster design for a sold out show at the Independent July 27th, 2024.",
+        "image": "front_Independent+July+27_Independent+July+27.jpg"
+      },
+
+      {
+        "title": "EWEB & Every Thing Live",
+        "type": "Poster",
+        "year": "2023",
+        "slug": "EWEB+&+Every+Thing+Live",
+        "description": "Poster Design for a night of super cool music at the Independent in San Francisco. The process for this design started with photographing sea shells at the beach.",
+        "image": "front_EWEB+&+Every+Thing+Live_EWEB+&+Every+Thing+Live+Poster.jpg"
+      },
+
+      {
+        "title": "Bolinas HRDWR",
+        "type": "Poster",
+        "year": "2023",
+        "slug": "Bolinas+HRDWR+Poster",
+        "description": "Poster for a night of music at the Bolinas Hardware Store, August 2023. The design went through a process of digital and analog manipulation before being printed on Kraft paper and pinned up around town. It was also featured on the cover of the Bolinas Hersay News that week in collaboration with Oliver Whitcroft.",
+        "image": "front_Bolinas+HRDWR+Poster_Bolinas+HRDWR+Poster_2023_01.jpg"
+      },
+
+      {
+        "title": "Rattlecan Pale Ale",
+        "type": "Cal Poly Graphic Design 3 assignemt",
+        "year": "2022",
+        "slug": "Rattlecan+Pale+Ale",
+        "description": " Rattlecan Pale Ale is a fictional identity completed in the Graphic Design 3 course with professor Lihn Dao at Cal Poly SLO. The idea for this project involved blending aesthetics of lo-brow and craft beers to create an approachable but refined Pale Ale. The Keywords, 8-hour-shift, and Sunday-drive were used to fuel the concept.",
+        "image": "front_Rattlecan+Pale+Ale_Rattlecan+Pale+Ale_2022_01.jpg"
+      }
+
+
+ 
+  ]
