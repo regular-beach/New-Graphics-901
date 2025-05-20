@@ -31,17 +31,24 @@
 
 
 <div class="grid-wrapper">
-  <div class="grid">
-    {% for path in work_list | shuffle %}
-      {% set filename = path.split('/')[-1] %}
-      {% if ".DS_Store" not in path %}
-        <div class="grid-item {% if 'hero_' in filename %}hero{% endif %}">
-          <img src="{{ url_for('static', filename=path.replace('static/', '', 1)) }}" alt=""/>
-        </div>
+{% for path in work_list | shuffle %}
+  {% set filename = path.split('/')[-1] %}
+  {% if ".DS_Store" not in path %}
+    <div class="grid-item {% if 'hero_' in filename %}hero{% endif %}">
+      {% if filename.endswith('.mp4') or filename.endswith('.webm') %}
+        <video autoplay muted loop playsinline>
+          {% if filename.endswith('.webm') %}
+            <source src="{{ url_for('static', filename=path.replace('static/', '', 1)) }}" type="video/webm">
+          {% elif filename.endswith('.mp4') %}
+            <source src="{{ url_for('static', filename=path.replace('static/', '', 1)) }}" type="video/mp4">
+          {% endif %}
+        </video>
+      {% else %}
+        <img src="{{ url_for('static', filename=path.replace('static/', '', 1)) }}" alt=""/>
       {% endif %}
-    {% endfor %}
-  </div>
-</div>
+    </div>
+  {% endif %}
+{% endfor %}
 
 {% endblock %}
 

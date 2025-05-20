@@ -149,6 +149,8 @@ margin-left: 0;
   font-weight: 400;
   font-style: normal;
   color: greenyellow;
+   line-height: 60px;
+    padding-bottom: 10px;
 }
 
 .project-meta {
@@ -200,6 +202,8 @@ margin-left: 0;
   .project-list {
     width: 100%;
   }
+
+
 
   .project-row {
     padding-bottom: 1.5rem;
