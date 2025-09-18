@@ -1,5 +1,13 @@
 [  
-    {
+{
+  "title": "Shakespeare on the Water",
+  "type": "Identity, Poster",
+  "year": "2025, Ongoing",
+  "slug": "Shakespeare+on+the+Water",
+  "description": "Rebranding and event graphics for a Sausalito theater company hosting various programming and workshops.",
+  "image": "front_Shakespeare+on+the+Water_Shakespeare+on+the+Water_fundraiser.jpg"
+},    
+{
     "title": "RB @ Pretty Gritty",
     "type": "Poster",
     "year": "2025",
@@ -19,6 +27,14 @@
     "url": "https://hendrixpark.com/"
   },  
   {
+    "title": "Marin Nicotine Prevention Program",
+    "type": "id",
+    "year": "2025",
+    "slug": "MNPP",
+    "description": "A new logomark for a Marin County based program part of the non-profit, Bay Area Community Resources (BACR). Designed to be a public facing identity used for signage, flyers, events and other promotional material.",
+    "image": "front_MMNP_MMNP_blue.jpg"
+  },  
+  {
     "title": "25th CMG Party",
     "type": "Invitation",
     "year": "2025",
@@ -36,14 +52,6 @@
   "image": "front_The+Farm+Diary_The+Farm+Diary_hero.jpg"
 },
 
-{
-  "title": "Shakespeare on the Water",
-  "type": "Identity, Poster",
-  "year": "2025, Ongoing",
-  "slug": "Shakespeare+on+the+Water",
-  "description": "Rebranding and event graphics for a Sausalito theater company hosting various programming and workshops.",
-  "image": "front_Shakespeare+on+the+Water_Shakespeare+on+the+Water_summer+club.jpg"
-},
   {
     "title": "ZMDF",
     "type": "Identity",
