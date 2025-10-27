@@ -4,15 +4,11 @@
   <defs>
     <style>
       .st0 {
+        fill: #94ea2f;
         font-family: InputMono-Regular, 'Input Mono';
         font-size: 48px;
       }
-
-      .st1 {
-        fill: #c0dd00;
-      }
     </style>
   </defs>
-  <rect class="st1" width="100" height="100"/>
   <text class="st0" transform="translate(4.18 67.23)"><tspan x="0" y="0">NG2</tspan></text>
 </svg>
