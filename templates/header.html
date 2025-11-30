@@ -39,6 +39,19 @@
       }
     }
 
+    function showOrHide4(clickedElem) {
+      var selector = clickedElem.getAttribute("data-selector");
+      var target = document.querySelector(selector);
+      if (target.style.display === "none" || target.style.display === "") {
+        target.style.display = "block";
+        clickedElem.innerText = "selected clients";
+      } else {
+        target.style.display = "none";
+        clickedElem.innerText = "selected clients";
+      }
+    }
+
+
     function showOrHide3(clickedElem) {
       var selector = clickedElem.getAttribute("data-selector");
       var target = document.querySelector(selector);
@@ -81,12 +94,23 @@
 
     <div class="column">
         <a href="#" id="id2" data-selector="#block2" onclick="showOrHide2(this)" class="index-link">contact</a>
-     
       <div class="index-link" style="display:none" id="block2"> 
       <a href="mailto:ren@new-graphics-2000.com">email</a>
-  
       <a href="https://www.linkedin.com/in/ren-conger-7b66831ab/" target="_blank">LinkedIn</a>
       </div> 
+
+      <div class="column">
+        <a href="#" id="id4" data-selector="#block4" onclick="showOrHide4(this)" class="index-link">
+          selected clients
+        </a>
+      
+        <div class="index-link" style="display:none" id="block4">
+          <!-- Add or remove clients here -->
+          <p>Proof Lab</p>
+          <p>Groundworks Office</p>
+          <p>Walk St. Helena</p>
+        </div>
+      </div>
     </div>
 
     
