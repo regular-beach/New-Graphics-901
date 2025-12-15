@@ -1,4 +1,22 @@
 [  
+  {
+  "title": "Weather Report",
+  "type": "Poster",
+  "year": "2025",
+  "slug": "Weather+Report",
+  "description": "19x30in poster design for Mackenzie Huber and July Guzman's collaborative art show featuring new work at the Bolinas Gallery. The artists wished not to feature their work as imagery for the design, so objects relating to their concept were sourced and photographed for this project.",
+  "image": "front_Weather+Report_Weather+Report+Sandwich1.jpg",
+  "url": "https://www.instagram.com/julyguzmn/"
+},
+  {
+  "title": "Regular Beach",
+  "type": "Art Direction, Web, Graphic Design",
+  "year": "2023-present",
+  "slug": "Regular+Beach",
+  "description": "Regular Beach is a brand, arts collective and media library building community in design and visual arts among other things. Visit the website to view ongoing projects.",
+  "image": "front_Regular+Beach_Regular+Beach+shirt3.jpg",
+  "url": "https://regularbeach.com"
+},
 {
   "title": "Drop Dead Gorgeous",
   "type": "Event materials",
@@ -15,15 +33,7 @@
   "description": "Rebranding and event graphics for a Sausalito theater company hosting various programming and workshops.",
   "image": "front_Shakespeare+on+the+Water_Shakespeare+on+the+Water_fundraiser.jpg"
 },    
-{
-  "title": "Regular Beach",
-  "type": "Art Direction, Web, Graphic Design",
-  "year": "2023-present",
-  "slug": "Regular+Beach",
-  "description": "Regular Beach is a brand, arts collective and media library building community in design and visual arts among other things. Visit the website to view ongoing projects.",
-  "image": "front_Regular+Beach_Regular+Beach_grid.jpg",
-  "url": "https://regularbeach.com"
-},
+
 
     {
     "title": "Hendrix Park",
