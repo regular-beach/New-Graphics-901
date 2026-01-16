@@ -1,4 +1,13 @@
-[  
+[
+    {
+  "title": "Bloke Knitwear",
+  "type": "Website",
+  "year": "2026-Ongoing",
+  "slug": "Bloke+Knitwear",
+  "description": "A custom Shopify site for bespoke knitwear brand creating high quality 1/1 handmade pieces with several collections released per year. This project is being developed in phases in collaboration with the Bloke founder. Phase 1 of the website has been completed.",
+  "image": "front_Bloke+Knitwear_Bloke+Knitwear.png",
+  "url": "https://blokeknitwear.com/"
+},  
   {
   "title": "Weather Report",
   "type": "Poster",
@@ -7,6 +16,15 @@
   "description": "19x30in poster design for Mackenzie Huber and July Guzman's collaborative art show featuring new work at the Bolinas Gallery. The artists did not wish to feature their work as imagery for the design. Instead, objects relating to their concept were sourced and photographed for this project. A short animated version was made for social media.",
   "image": "front_Weather+Report_Weather+Report+Sandwich1.jpg",
   "url": "https://www.instagram.com/julyguzmn/"
+},
+  {
+  "title": "Walk St. Helena",
+  "type": "Graphic design, Digital Publishing",
+  "year": "2025",
+  "slug": "Walk+St.+Helena",
+  "description": "NG2 was approached by St. Helena Community members to design a 100 page report outlining improvements for walking trails and open space in the City of St. Helena. A straightforward visual identity and graphic approach was developed to structure this document. This project was created in collaboration with David Knudsen along with several other community members- with oversite given by experienced landscape architect Joe Runco (SWA Group).",
+  "image": "Walk+St.+Helena_Walk+St.Helena_01.jpg",
+  "url": "https://www.walksthelena.org/"
 },
   {
   "title": "Regular Beach",
