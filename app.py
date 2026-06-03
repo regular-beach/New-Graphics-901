@@ -57,30 +57,41 @@ import json
 
 @app.route('/projects/<project>')
 def project(project):
-    # Get list of image paths
+
+    # 1. Build image list
     path = "static/img/projects/" + project
     fname = []
     for root, d_names, f_names in os.walk(path):
         for f in f_names:
-            if not f.startswith('.'):  # Ignore hidden files like .DS_Store
+            if not f.startswith('.'):
                 fname.append(os.path.join(root, f))
 
-    # Load metadata from projects.json
-    project_data = {}
+    # 2. Load metadata (active + backup)
+    all_projects = []
+
     try:
         with open('projects.json') as f:
-            all_projects = json.load(f)
-            # Find matching project by slug
-            project_data = next((p for p in all_projects if p.get("slug") == project), {})
+            all_projects.extend(json.load(f))
     except FileNotFoundError:
         print("projects.json not found.")
 
-    # Merge the metadata into the render call
+    try:
+        with open('backup.json') as f:
+            all_projects.extend(json.load(f))
+    except FileNotFoundError:
+        print("backup.json not found.")
+
+    project_data = next(
+        (p for p in all_projects if p.get("slug") == project),
+        {}
+    )
+
+    # 3. SINGLE return (only once!)
     return render_template(
         f'projects/{project}.html',
         project=project,
         work_list=fname,
-        **project_data  # Adds: title, type, year, description, etc.
+        **project_data
     )
 
 
