@@ -1,14 +1,13 @@
 [
-    {
-    "title": "Hendrix Park",
-    "type": "Website, Brand design",
-    "year": "2025-Ongoing",
-    "slug": "Hendrix+Park",
-    "description": "Hendrix Park is a one-person sewing studio making clothing with vintage industrial machines in Sausalito, CA. Hendrix Park has no desire for a rigid identity system. They like the brand to be a flexible and evolving collection of fun assets, just like their products! This is an ongoing collaboration that has included a custom shopify site, woven Label graphics, screenprinted hangtags & more.",
-    "image": "front_Hendrix+Park_Hendrix+Park_web1.jpg",
-    "url": "https://hendrixpark.com/"
-  }, 
-
+  {
+  "title": "Regular Beach",
+  "type": "Art direction, web, graphic design",
+  "year": "2023-present",
+  "slug": "Regular+Beach",
+  "description": "Regular Beach is a brand, arts collective and media library building community in design and visual arts among other things. Visit the website to view ongoing projects.",
+  "image": "Regular+Beach_Regular+Beach+shirt3.jpg",
+  "url": "https://regularbeach.com"
+},
   {
   "title": "Proof Lab Site",
   "type": "Website",
@@ -18,6 +17,17 @@
   "image": "front_Proof+Lab+Site_Proof+Lab+Site.jpg",
   "url": "https://www.prooflab.com/"
 }, 
+  
+  {
+    "title": "Hendrix Park",
+    "type": "Website, Brand design",
+    "year": "2025-Ongoing",
+    "slug": "Hendrix+Park",
+    "description": "Hendrix Park is a one-person sewing studio making clothing with vintage industrial machines in Sausalito, CA. Hendrix Park has no desire for a rigid identity system. They like the brand to be a flexible and evolving collection of fun assets, just like their products! This is an ongoing collaboration that has included a custom shopify site, woven Label graphics, screenprinted hangtags & more.",
+    "image": "front_Hendrix+Park_Hendrix+Park_web1.jpg",
+    "url": "https://hendrixpark.com/"
+  }, 
+
   {
   "title": "Bloke Knitwear",
   "type": "Website",
@@ -37,15 +47,6 @@
   "url": "https://www.walksthelena.org/"
 },  
 
-  {
-  "title": "Regular Beach",
-  "type": "Art direction, web, graphic design",
-  "year": "2023-present",
-  "slug": "Regular+Beach",
-  "description": "Regular Beach is a brand, arts collective and media library building community in design and visual arts among other things. Visit the website to view ongoing projects.",
-  "image": "Regular+Beach_Regular+Beach+shirt3.jpg",
-  "url": "https://regularbeach.com"
-},
   {
   "title": "Groundworks Office",
   "type": "Graphic design, digital publishing",
