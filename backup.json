@@ -84,7 +84,25 @@
     "slug": "25th+CMG+Party",
     "description": "Animated Invitation celebrating CMG Landscape Architecture's 25th year in Business.",
     "image": "front_25th+CMG+Party_25th+CMG+Party.gif"
-  }
+  },
+
+  {
+  "title": "Bloke Knitwear",
+  "type": "Website",
+  "year": "2026",
+  "slug": "Bloke+Knitwear",
+  "description": "A custom Shopify site for bespoke knitwear brand creating high quality 1/1 handmade pieces with several collections released per year. This project is being developed in phases in collaboration with the Bloke founder. Phase 1 of the website has been completed.",
+  "image": "front_Bloke+Knitwear_Bloke+Knitwear.png",
+  "url": "https://blokeknitwear.com/"
+},  
+    {
+        "title": "Schank Builders",
+        "type": "Identity, Graphic Design",
+        "year": "2022, 2024",
+        "slug": "Schank+Builders",
+        "description": "Identity and graphic design for family owned construction management and general contracting company Schank Builders (formerly Pacific Construction Managers) located in Santa Cruz, CA.",
+        "image": "front_Schank+Builders_Schank+Builders+Logomark.png"
+      }
 
 
     ]
